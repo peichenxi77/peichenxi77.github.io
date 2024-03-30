@@ -1,43 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
-<head>
-  <title>My first styled page</title>
-  <link rel="stylesheet" href="mystyle.css">
-</head>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Word Website</title>
+    <link rel="stylesheet" href="mysytle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Font1|Font2&display=swap" rel="stylesheet">
+    <script src="script.js">  </script>
+  </head>
+  <body id="container">
+  <div id="former">
+    <div class= "part1">
+      <h1>This is a website for reciting English words.</h1>
+      <hr color="#060270" width=70%></hr>
+      <h2><font face="Georgia"  >You can practice the following three categories of words.<br>
+        Please begin your practice through click.<br>
+        <ul id ="content">
+          <li><div id="fruit_part"><a href="#mangosteen">fruit</a></div></li>
+          <li><div id = "flower_part"><a href="#forgetmenot">flower</a></div></li>
+          <li><div id = "animal_part"><a href="#hamster">animal</a></div></li>
+        </ul>
+    </div>
+<!--purple fruit 第一行-->
+<div id="frist">
+      <div  class="fruit" id="mangosteen" style="text-align:center ; color:#A88FCB">
+          <img src="photo/mangosteen.jpg"
+        width="200px" height="200px">
+          <button class = "button1" onclick= "answer2()">answer</button>
+      </div>
 
-<body>
+        <div class="fruit" id="grape" style="text-align:center">
+            <img src="photo/grape.jpg"
+          width="200px" height="200px">
+            <button class = "button1" onclick= "answer3()">answer</button>
+        </div>
 
-<!-- Site navigation menu -->
-<ul class="navbar">
-  <li><a href="https://baidu.com">Home page</a>
-  <li><a href="musings.html">Musings</a>
-  <li><a href="town.html">My town</a>
-  <li><a href="links.html">Links</a>
-</ul>
+          <div class="fruit" id="blueberry" style="text-align:center">
+              <img src="photo/blueberry.jpg"
+            width="200px" height="200px">
+              <button class = "button1" onclick= "answer4()">answer</button>
+          </div>
+</div>
 
-<!-- Main content -->
-<h1 style="
-border-style:solid;
-border-width:7px;
-border-color:black;
-padding:20px;
-text-align:center;
-background-color:cadetblue;
-color :white;
-">My first styled page</h1>
+<!--flower 第二行-->
+<div id= "second">
+          <div class="fruit" id="forgetmenot" style="text-align:center">
+              <img src="photo/forgetmenot.jpg" width="200px" height="200px">
+              <button class = "button1" onclick= "answer1()">answer</button>
+          </div>
+          <div class="fruit" id="daisy" style="text-align:center">
+              <img src="photo/daisy.jpg" width="200px" height="200px">
+              <button class = "button1" onclick= "answer5()">answer</button>
+          </div>
+          <div class="fruit" id="lavender" style="text-align:center">
+              <img src="photo/lavender.jpg" width="200px" height="200px">
+              <button class = "button1" onclick= "answer6()">answer</button>
+          </div>
+</div>
 
-<p>Welcome to my styled page!
+<!--animal 第三行-->
+<div id= "third">
+  <div class="fruit" id="hamster" style="text-align:center">
+      <img src="photo/hamster.jpg" width="200px" height="200px">
+      <button class = "button1" onclick= "answer7()">answer<br>(prompt:仓鼠)</button>
+  </div>
+  <div class="fruit" id="rabbit" style="text-align:center">
+      <img src="photo/rabbit.png" width="200px" height="200px">
+      <button class = "button1" onclick= "answer8()">answer<br>(prompt:兔子)</button>
+  </div>
+  <div class="fruit" id="lesserpanda" style="text-align:center">
+      <img src="photo/lesser_panda.jpg" width="200px" height="200px">
+      <button class = "button1" onclick= "answer9()">answer<br>(prompt:小熊猫)</button>
+  </div>
 
-<p>It lacks images, but at least it has style.
-And it has links, even if they don't go
-anywhere&hellip;
 
-<p>There should be more here, but I don't know
-what yet.
+</div>
+<div id = "latter">
+<button id="final_socre" onclick="show()"> click here <br> to get your socre!</button>
+</div>
 
-<!-- Sign and date the page, it's only polite! -->
-<address>Made 5 April 2004<br>
-  by myself.</address>
-
-</body>
+  </body>
 </html>
