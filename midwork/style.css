@@ -1,0 +1,250 @@
+@import url("https://font.googleapis.com.css?family=Poppins:400,500,700");
+
+*{
+  margin:0;
+  padding:0 5px;
+  overflow-x:hidden;
+  font-family: consolas;
+  font-weight: bold;
+}
+
+/*整体的分块效果*/
+.introduction{
+  padding:10px 5px;
+}
+h1{
+ padding:6% 0 1% 0;
+  display: inline-block;
+  border-block-end: solid 0.4rem #78A455;
+  writing-mode: horizontal-tb;
+}
+.partcontent{
+  padding:1% 0 5% 0;
+}
+.btn-sm:hover{
+  background-color:#6f9940;
+  border-color:#6f9940;
+}
+
+/*首页的效果*/
+section{
+  position : relative;
+  overflow:hidden;
+  width: 100%;
+  height: 100vh;
+  background:	#8FBC8F;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section h2{
+  font-size:7vw;
+  margin: 0 auto;
+  overflow-y: hidden;
+  padding:5px;
+  /*color:rgba(117,146,184,0.5);*/
+  color:rgba(0,0,0,0.64);
+  font-family: cursive;
+}
+section span{
+  position: absolute;
+  bottom:-50px;
+  background:transparent;
+  border-radius:50%;
+  pointer-events:none;
+  box-shadow:inset 0 0 10px rgba(255,255,255,0.5);
+  animation:animate 4s linear infinite;
+}
+section span::before{
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  transform :scale(0.25) translate(-70%,-70%);
+  background: radial-gradient(#fff,transparent);
+  border-radius:50%;
+}
+@keyframes animate {
+  0%
+  {
+    transform:translateY(0%);
+    opacity:1;
+  }
+  99%
+  {
+    opacity:1;
+  }
+  100%
+  {
+    transform: translateY(-1200%);
+    opacity: 0;
+  }
+}
+
+/*work页*/
+
+/*开头的整屏切换*/
+.fullscroll{
+  position:relative;
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+  scroll-snap-type:y mandatory;
+}
+.fullscroll .section{
+  position:relative;
+  width:100%;
+  height:100%;
+  scroll-snap-center: start;
+  background-blend-mode:multiply;
+
+}
+.fullscroll .section:nth-child(1){
+  background:#FDFEFE url('img/background2.jpg');
+  background-size:cover;
+  background-attachment:fixed;
+}
+.fullscroll .section:nth-child(2){
+  background:white url('#');
+  background-size:cover;
+  background-attachment:fixed;
+}
+.fullscroll .section .content{
+  padding-left:8%;
+  padding-top: 20%;
+}
+
+/*卡片动效图*/
+.card_piano{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.mycarousel {
+            display: flex;
+            width: 90vw;
+        }
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: all 600ms ease-in;
+
+}
+.panel h3 {
+  overflow-y: hidden;
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  margin: 0;
+  opacity: 0;
+  font-family:YouYuan bold;
+}
+.panel.active {
+  flex: 5;
+}
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+@media (max-width: 400px) {
+    .container {
+        width: 90vw;
+      }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+      display: none;}
+}
+
+/*图片的放大效果*/
+img{
+  border-radius:15px;
+}
+img.technology:hover{
+  border-radius:10px;
+  transform:scale(1.1);
+}
+.card{
+  margin:5px;
+  border-inline: solid #dbdbdb;
+writing-mode: horizontal-tb;
+}
+
+/*关于手风琴*/
+.accordion{
+  margin: 2% 10%;
+  border-radius: 10% / 50%;
+  border:3px solid;
+}
+.accordion-button:focus {
+    box-shadow: none; /* 移除焦点时的阴影效果 */
+    outline: none; /* 确保没有轮廓线 */
+}
+/* 可选：改变手风琴按钮在激活时的背景和文本颜色 */
+.accordion-button:not(.collapsed) {
+    background-color: #fff; /* 设置为你想要的背景颜色，这里是白色 */
+    color: #000; /* 设置为你想要的文本颜色，这里是黑色 */
+}
+
+/*结尾的结束*/
+.final{
+  color:#568F40;
+  padding:3%;
+}
+
+
+
+#ending{
+  font-family: YouYuan bold;
+}
+
+
+/*尾部的装饰*/
+#github{
+  margin:20px;
+}
+#github a:link{
+  text-decoration: none;
+  color:#000;
+}
+
+#github a:visited{
+  text-decoration: none;
+  color:#000;
+}
+
+#xhs{
+  margin:20px;
+}
+#xhs a:link{
+  text-decoration: none;
+  color:#000;
+}
+
+#xhs a:visited{
+  text-decoration: none;
+  color:#000;
+}
+
+#github a svg{
+  color:purple;
+}
+#xhs a svg{
+  color:red;
+}
+
+footer h6:hover{
+  border-radius:10px;
+  transform:scale(1.3);
+}

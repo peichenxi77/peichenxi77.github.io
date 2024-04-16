@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人介绍</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+
+</style>
+<script>
+
+window.onload = function(){
+    const panels = document.querySelectorAll('.panel')
+    panels.forEach(panel => {
+          panel.addEventListener('mouseover', () => {
+          removeActiveClasses()
+          panel.classList.add('active')
+                })
+           })
+    function removeActiveClasses() {
+    panels.forEach(panel => {
+    panel.classList.remove('active')
+                })
+          }
+    }
+
+    // 导航栏点击触发active
+$(document).ready(function () {
+        // 遍历li标签，从而获取下面a标签的href，这里为了方便说明选用的是.nav类，在实际应用中可以使用id代替
+        $('.nav').find('li').each(function () {
+            var a = $(this).find('a:first')[0];
+            // 判断a标签的href是否与当前页面的路径相同
+            if ($(a).attr("href") === location.pathname) {
+                $(this).addClass("active");
+            } else {
+                $(this).removeClass("active");
+            }
+        })
+    })
+      </script>
+  </head>
+  <body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--导航设计 -->
+<nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="img/icon.png" width=50px height=34px>Cinder</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"  aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse justify-content-end" id ="navbarResponsive">
+      <ul class=" navbar-nav ">
+          <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-home"></i>&nbspHome</a>
+          </li>
+          <li class="nav-item">
+                  <a class="nav-link" href="#technology"><i class="fas fa-laptop"></i>&nbspTechnology</a>
+          </li>
+          <li class="nav-item">
+                  <a class="nav-link" href="#advertisement"> <i class="fas fa-map"></i>&nbspAdvertisement</a>
+          </li>
+          <li class="nav-item">
+                  <a class="nav-link" href="#paper"><i class="fas fa-book"></i>&nbspPaper</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<!--整屏切换-->
+<div class="fullscroll ">
+  <div class="section">
+    <div class="content">
+      <h2 >Welcome to my homepage~</h2>
+      <p class="lead">我是裴晨希，就读于中国传媒大学。<br>目前在广告学院的计算广告专业学习，欢迎来到我的主页！
+      <br>点击下方即可查看在线简历~</p>
+        <button type="button" class="btn btn-success btn-lg" onclick="location.href='profile.html'">Online Profile</button>
+    </div>
+  </div>
+  <div class="section">
+    <div class="content">
+      <!--目前是白屏状态，加不加东西看心情-->
+      <p><br><br>  </p>
+
+    </div>
+  </div>
+  </div>
+<!--part1介绍-->
+
+<div class="introduction container-fluid">
+  <div class="row text-center">
+    <div class="parttitle"><h1 class="display-6" id="technology">Technology Skill</h1>
+  </div>
+      <p class="partcontent lead">能够熟练使用Python和R语言，同时了解JavaScript和C语言，主要应用他们进行数据爬虫与分析，在数字设计方面擅长使用processing工具进行创作，以下是一些示例。</p>
+  </div>
+  <div class="row text-center">
+  <div class="col-12">
+    <img src="img/2.gif">
+    <p>--here--</p>
+  </div>
+  </div>
+</div>
+
+
+<!--特色卡片效果切换图-->
+<div class="card_piano">
+<div class="mycarousel container-fluid">
+<div class="panel active" style="background-image:url('img/work1.jpg')">
+<h3 style="color:#3c6232">PhotoShop<br>主题海报</h3></div>
+<div class="panel" style="background-image:url('img/work2.jpg')" >
+<h3 style="color:#e0007a">Processing<br>色彩幻影</h3></div>
+<div class="panel" style="background-image:url('img/work3.jpg')" >
+<h3 style="color:#a1818b">Processing<br>字母堆叠</h3></div>
+<div class="panel" style="background-image:url('img/work4.jpg') " >
+<h3 style="color:#8b4513">Processing<br>古典主义</h3></div>
+<div class="panel" style="background-image:url('img/work5.jpg')" >
+<h3 style="color:#3b3b3b">Processing<br>圆缺之美</h3></div>
+</div>
+</div>
+
+<!--下方放两个：processing视频作品，以及爬虫作品-->
+<div class="container-fluid">
+  <div class="row text-center">
+  <div class="box col-md-6">
+<img class="technology img-fluid" src="img/photo1.jpg" id="box">
+  <h5 class="h5"><br>——* Processing 视频设计 *——</h5>
+  <p>
+  <button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  更多信息
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+  原图是千里江山图，通过processing的代码实现下雪效果，视频过大暂时未上传。
+  </div>
+</div>
+  </div>
+    <div class="box col-md-6">
+      <img class="technology img-fluid" src="img/photo2.jpg" id="box" >
+      <h5 class="h5"><br>——* Python 爬虫案例 *——</h5>
+      <p>
+      <button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+      更多信息
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample1">
+      <div class="card card-body">
+      小红书是动态JSON网页，采用相关库进行页面端登录，然后继续爬取任务，统计词频和可视化。
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!--part2介绍-->
+<div class="introduction container-fluid">
+  <div class="row text-center">
+    <div class="parttitle"><h1 class="display-6" id="advertisement">Advertisement Work</h1>
+  </div>
+      <p class="partcontent lead">在大学两年的学习中，通过参加比赛和课程要求，为品牌写了一些长短文案作品，在与小组的合作之中也产出了一些广告策划作品。</p>
+  </div>
+</div>
+
+<div class="container-fluid">
+<div class="row text-center">
+<div class="col-12">
+  <img src="img/1.gif">
+  <p>--here--</p>
+</div>
+</div>
+<div class="row text-center">
+<div class="col-xs-6 col-md-6 col-lg-3">
+<div class="card">
+<img src="img/111.png" class="card-img-top">
+  <div class="card-body">
+  <h5 class="card-title">连花清瘟|文案</h5>
+  <p class="card-text">《家中必备的花》<br>是一篇短文案，巧妙的比喻联系，向消费者传递家中常备的概念。</p>
+
+  <button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"
+  style="display:block;margin:0 auto">更多信息</button>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTopLabel">文案内容</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    家中必备的花，是清瘟的连花。
+  </div>
+</div>
+  </div>
+  </div>
+  </div>
+<div class="col-xs-6  col-md-6 col-lg-3">
+<div class="card">
+<img src="img/card2.png" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">杰士邦|策划案</h5>
+<p class="card-text">《简单爱》<br>打通青年大学生群体，通过青年喜闻乐见的方式培养用户心智。</p>
+<button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop1" aria-controls="offcanvasTop1"
+style="display:block;margin:0 auto">更多信息</button>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop1" aria-labelledby="offcanvasTopLabel1">
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title" id="offcanvasTopLabel1">杰士邦策划内容</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+  我们洞察出一群：对爱情和性有旺盛好奇心的对爱情和性有旺盛好奇心的低年级大学生。他们是主要的消费受众，青涩却不幼稚，懵懂但不无知，
+  对爱情有着最纯粹的看法与态度。<br>以“简单爱”作为主题，一方面，抓住低年级大学生爱情观“简单、纯粹”的特点，以更年轻的口吻同目标消费者对话，培育消费者心智；另一方面，
+  借助周杰伦歌曲IP，利用其自身流量，打造借助周杰伦歌曲IP，利用其自身流量，打造“音乐+营销”玩法，吸引更多目标消费者参与其中。
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-6 col-md-6 col-lg-3">
+<div class="card">
+<img src="img/card3.png" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">通州文旅|策划</h5>
+<p class="card-text">《肉卷出逃计划》<br>宣传通州的休闲娱乐属性，打造一个打工人的心灵栖息地形象。</p>
+<button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop2" aria-controls="offcanvasTop2"
+style="display:block;margin:0 auto">更多信息</button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasTop2" aria-labelledby="offcanvasTopLabel2">
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title" id="offcanvasTopLabel2">通州文旅策划内容</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+  对于旅游群体而言，年轻无孩人群是其中的一个消费主力，他们没有过多的经济负担，对世界更加向往。但与此同时，他们也有巨大的压力需要释放。<br>
+  而通州恰恰就是：一个生活节奏相对较慢，风景优美的地方，因为“落后乡村”又被称为睡城，是它最独特的点。所以我们想要利用这一印象，
+  向目标受众传递这里可以卸下压力，这里可以放下重担，这里是充电站，帮助疲倦而卷的人们恢复精力。主要活动内容就聚焦于通州休闲特色，帮助人们充分放松。
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-6  col-md-6 col-lg-3">
+<div class="card">
+<img src="img/444.png" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">悦康|长文案</h5>
+<p class="card-text">《更懂你》<br>传递品牌陪伴理念，洞察女性经期痛点，拉动用户的情感共鸣。</p>
+<button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop3" aria-controls="offcanvasTop3"
+style="display:block;margin:0 auto">更多信息</button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasTop3" aria-labelledby="offcanvasTopLabel3">
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title" id="offcanvasTopLabel3">长文案内容</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+  我知道月经每个月都会如约而至，给你带来烦恼与痛苦。月经来之前，你会被说不知道搭错了哪一根筋。
+暴躁的像母老虎，为有人踩了你的鞋而生气，因为室友的小毛病而崩溃想哭，所有人都在说你矫情，这也让你烦恼，
+你也不想，你也不愿，但是你还是努力的平稳情绪，甚至一次比一次更加努力，即使还是遇到很多状况外的问题。<br>
+月经到来时，疼痛总是突如其来，措不及防，一秒上头就能扒光你的所有精力。你想坚持上课上班，但是痉挛让你真的苦不堪言，
+肚子痛带着手发抖，打不了字，肚子痛让脑子里再也想不动别的事情。<br>
+你真的超乎想象的坚强，从小到大都是。但是，下次痛经，别再独自承受那么多，让悦康四物胶囊守护你，它懂你的所有坚强，看到了你一路的不容易。
+</div>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </div>
+
+<!--part3介绍-->
+<div class="introduction container-fluid">
+  <div class="row text-center">
+  <div class="parttitle"><h1 class="display-6" id="paper">Paper Work</h1>
+  </div>
+    <p class="partcontent lead">在学习计算广告专业课程时，曾对大数据与人工智能选题、消费者选题、品牌选题、市场调查等有过研究，摘取部分展示。</p>
+  </div>
+  <div class="row text-center">
+  <div class="col-12">
+    <img src="img/3.gif">
+    <p>--here--</p>
+  </div>
+  </div>
+</div>
+
+<!--要一个手风琴吧*1-->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+<div class="accordion-item">
+<h2 class="accordion-header" id="flush-headingOne">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+  &nbsp&nbsp项目一：关于孕产妇的市场调查
+</button>
+</h2>
+<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+<div class="accordion-body"><h6>&nbsp当新一代85后、90后甚至00后成为妈妈，她们不再顺从传统坐月子方式中对孕产妇的不合理约束，而是渴望保障婴儿在得到合理照顾的同时，自己也可以得到贴心舒适的照顾，能够度过一个安心舒适的月子期。<br>&nbsp
+随着类似观念的转变和“她经济”的大热，月子中心行业也逐渐觉醒，并且一直处在发展红利期（市场规模年增速达到9.2%）。德邦证券测算，2025年全行业市场规模有望达到455亿元。除月子中心这个综合服务行业外，与其相关的细分行业如产后修复、孕产妇营养品、早教行业也发展态势迅猛。<br>&nbsp
+这些月子服务行业面对的是追求更高品质月子服务的孕产妇群体，他们拥有更强的消费能力和自我观念，但与此同时，这部分群体对服务行业也有着更高的期待与要求。此外，月子中心行业缺少监管、收费推销乱象也大受孕产妇诟病。福布斯中国发布的《中国月子3.0时代白皮书》提出月子服务行业进入新时代——科学智慧的月子中心时代。<br>&nbsp
+为了让“科学智慧”不成为月子服务行业的空口号，更好的顺应孕产妇群体的需求，本研究团队选取了消费客群相对集中的一线城市开展调查。<br>&nbsp我们选取包含各类月子服务的月子中心代表月子服务行业，最后引入其他月子服务行业的调查，共同总结结论。主要了解一线城市孕产妇群体的月子观念，在此基础之上进行数据分析，
+探究该群体对于月子中心消费的影响因素，归纳总结潜在消费者特征，探究孕产妇月子需求，为月子中心以及相关产业的发展提供一些参考。<br>&nbsp针对上述研究群体，以文献调研和数据爬取内容为参考进行问卷设计，通过预调查对调查内容进行检验改进，计算需要调查的样本量。
+然后利用分层抽样与三阶段不等概率抽样绘制抽样框，调查地域和人数进行控制，在一线城市进行线上线下配合调查，经过数据检验最终收集有效问卷345份，问卷信度效度检验结果良好。<br>&nbsp首先我们对样本进行了<u>描述性统计分析</u>，对孕产妇群体的月子观念、认知现状与消费意愿做出基本概述。 接着我们对孕产妇群体中未来有潜在消费意愿的人进行分析，
+使用<u>K-prototype聚类算法</u>通过方差检验建立潜在用户价值模型，将潜在用户划分为：重要潜在用户、重要发展用户、一般潜在用户和低价值潜在用户四类，并归纳出不同类型用户的特点。
+<br>&nbsp然后我们想使用结构方程模型探究影响月子中心消费行为的因素。一方面根据之前爬取到的数据做<u>LDA主题模型分析</u>，发掘出孕产妇消费月子中心的不同主题因素。另一方面配合论文资料提供的范式，最终从购买态度、主观规范、感知价值、客观情景、消费意向5个维度构建<u>结构方程模型</u>的评价指标体系，
+该模型区分效度良好并顺利通过验证性因子分析，接着对模型进行拟合优度指数验证，探究得出感知价值和客观情景对于消费意向有较大的正向促进作用。最后分析孕产妇需求视角，将月子中心服务设计拆分为品牌促销、母婴护理、产康服务、服务环境四个方面，将它们作为自变量，
+消费意愿为因变量，通过<u>多元线性回归</u>，探究孕产妇的月子需求痛点。</h6></div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="flush-headingTwo">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+  &nbsp&nbsp项目二：关于大数据与AI的实证研究
+</button>
+</h2>
+<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+<div class="accordion-body"><h6>&nbsp在《人工智能带来广告创意模式的变革与思考》一文中，2023年因为chatGPT等<u>大模型</u>的出现迅速改变了广告的运作流程，尤其是在<u>广告创意生成</u>实现方面。AI给每一种广告创意模式都带来了实现的新思路，形成了新的广告创意运作模式：批量化生成创意。但是批量化生成下重点应探讨广告创意的质量，
+  通过研究调查发现AI广告创意质量已经是达标水平，而且极有可能未来的技术将会塑造出创意优品，这就会给广告从业者和广告行业带来一系列挑战。</h6></div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="flush-headingThree">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+  &nbsp&nbsp项目三：关于华为的2B营销探究
+</button>
+</h2>
+<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+<div class="accordion-body"><h6>&nbsp此次作业为小组作业，我们研究了华为旗下的三大业务版块：华为云、华为连接、华为计算。探讨了在华为业务版块之下他们使用怎样的媒介资源去营销和传递自身，并在特殊的终端产品版块发现特殊的营销载具，且不同媒介下有不同的发布特点。最后来到线索运营这个部分，
+  也是我们探究的重点。在调查过程中，我们通过线索渠道与官方人员沟通，与内部人员交谈，发现了线上线下的多种营销渠道，然后探究具体的营销链路，发现了<u>leads转化过程</u>、<u>铁三角模式</u>等有价值的信息。</h6></div>
+</div>
+</div>
+</div>
+
+<div class="introduction container-fluid">
+  <div class="row text-center">
+  <div class="parttitle"><h1 class="display-6" id="paper">ENDING 结语</h1>
+  </div>
+
+  </div>
+  <div class="row text-center">
+  <div class="col-12">
+    <img src="img/4.gif">
+    <p>--here--</p>
+  </div>
+  </div>
+</div>
+<!--结尾来一个图片和文字的响应式布局呗！-->
+<div class="final container-fluid" >
+
+<div class="row text-center">
+  <div  class="col-12 ">
+    <h4 id="ending">
+  <br>生命是一万次的春和景明，<br>无时无刻不绽放着新生，<br>永远努力向上、生长，<br>&<br>
+  KEEP ASPIRING TO INSPIRE UNTIL I EXPIRE.<br>&<br>起落自有时序，<br>所以只敬爱自由。 </h4>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+<img src="img/final3.jpg" width="94%" height="110px">
+</div>
+<!---结尾处-->
+
+
+
+<footer style="border-block-start:dotted 0.2rem; margin:50px 0 0 0;">
+<div class="container-fluid" style="background-color:#f7f7f7;">
+<div class="row text-center">
+  <div class="col-1"></div>
+  <div class="col-5">
+<h6 id="github"><a href="https://github.com/peichenxi77">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>GitHub</a></h6>
+</div>
+<div class="col-5"><h6 id="xhs"><a href="https://www.xiaohongshu.com/user/profile/605ea68700000000010095dd">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" class="bi bi-heart-half" viewBox="0 0 16 16">
+    <path d="M8 2.748v11.047c3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+  </svg>XiaoHongshu</a></h6></div>
+<div class="col-1"></div>
+</div>
+
+<div class="row text-center">
+<div class="col-3"></div>
+<div class="col-6">
+  <hr>
+  <p>地址：北京市中国传媒大学</p>
+  <p>邮编：100024</p>
+  <p>邮箱：20231234@.cuc.edu.cn</p>
+  <hr>
+  <p style="font-size:0.8rem;font-weight:lighter;">感谢友情加萌图标：@罗小黑</p>
+</div>
+<div class="col-3"></div>
+<div class="row text-center">
+<hr>
+<p class="lead">———— 在路上，不希望太卷，不希望太闲，慢慢走就好 ————</p>
+</div>
+</div>
+</footer>
+
+
+
+  </body>
+</html>
